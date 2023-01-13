@@ -70,6 +70,16 @@ function winCheck(computerChoice, playerChoice) {
   }
 }
 
+function playAgain() {
+  let playAgain = confirm("Do you want to play another game enter?");
+  if (playAgain) {
+    location.reload();
+  } else {
+    goodbye();
+    errorKillScript();    
+  }
+}
+
 function playGame() {
   let playerCounter = 0;
   let computerCounter = 0;
@@ -88,6 +98,7 @@ function playGame() {
   } else {
     alert("The game ended in a draw.")
   }
+  playAgain();
 };
 
 playGame();
