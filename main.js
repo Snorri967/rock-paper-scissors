@@ -46,22 +46,48 @@ let playerChoice = function () {
   }
 }
 
-let winCheck = function (computerChoice, playerChoice) {
+function winCheck(computerChoice, playerChoice) {
   if (computerChoice === "Rock" && playerChoice === "Paper") {
     alert(`${playerChoice} beats ${computerChoice} you win this round!`);
+    return 0;
   } else if (computerChoice === "Rock" && playerChoice === "Scissors") {
     alert(`${computerChoice} beats ${playerChoice} you lose this round!`);
+    return 1;
   } else if (computerChoice === "Paper" && playerChoice === "Scissors") {
     alert(`${playerChoice} beats ${computerChoice} you win this round!`);
+    return 0;
   } else if (computerChoice === "Paper" && playerChoice === "Rock") {
     alert(`${computerChoice} beats ${playerChoice} you lose this round!`);
+    return 1;
   } else if (computerChoice === "Scissors" && playerChoice === "Rock") {
     alert(`${playerChoice} beats ${computerChoice} you win this round!`);
+    return 0;
   } else if (computerChoice === "Scissors" && playerChoice === "Paper") {
     alert(`${computerChoice} beats ${playerChoice} you lose this round!`);
+    return 1;
   } else {
     alert(`You chose ${playerChoice} and the computer chose ${computerChoice} the round was a draw.`);
   }
 }
 
-winCheck(computerChoice(), playerChoice());
+function playGame() {
+  let playerCounter = 0;
+  let computerCounter = 0;
+  for (let i = 0; i < 5; i++) {
+    let check = winCheck(playerChoice(), computerChoice());
+    if (check === 0) {
+      playerCounter++;
+    } else if (check === 1) {
+      computerCounter++;    
+    }
+  }
+  if (playerCounter > computerCounter) {
+    alert(`Congratulations you win with a score of ${playerCounter} to ${computerCounter}`)
+  } else if (computerCounter > playerCounter) {
+    alert(`Unlucky you lost with a score of ${playerCounter} to ${computerCounter}`)
+  } else {
+    alert("The game ended in a draw.")
+  }
+};
+
+playGame();
