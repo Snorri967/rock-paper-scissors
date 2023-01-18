@@ -1,0 +1,82 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+}
+
+.welcomeDiv {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.welcomeDiv > .welcomePara {
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.welcomeDiv > .welcomeButton {
+  border-radius: 10px;
+  height:30px;
+  width: 100px;
+  margin-top: 20px;
+}
+
+.container {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 50%;
+}
+
+.playerChoiceDiv {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+}
+
+.playerChoiceDiv > button {
+  border-radius: 10px;
+  height:30px;
+  width: 100px;
+}
+
+.resultDiv {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  top: 55%;
+}
+
+.resultDiv > .roundResult {
+  position: fixed;
+  top: 57%;
+}
+
+.resultDiv > .score {
+  position: fixed;
+  top: 61%;
+}
+
+.resultDiv > .finalResult {
+  font-size: 32px;
+  font-weight: bold;
+}
+
+.container > .playAgainButton {
+  border-radius: 10px;
+  height:30px;
+  width: 100px;
+  margin-top: 20px;
+}
