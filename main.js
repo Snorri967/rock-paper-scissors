@@ -38,7 +38,7 @@ finalResultPara.classList.add("finalResult");
 
 const playAgainButton = document.createElement("button");
 playAgainButton.classList.add("playAgainButton");
-playAgainButton.textContent = "Play Again";
+playAgainButton.innerHTML = '<i class="fa-solid fa-rotate-right fa-2xl"></i>';
  
 const welcomeDiv = document.createElement("div");
 welcomeDiv.classList.add("welcomeDiv");
@@ -51,7 +51,7 @@ function welcome() {
   welcomeDiv.appendChild(welcomePara);
   let welcomeButton = document.createElement("button");
   welcomeButton.classList.add("welcomeButton");
-  welcomeButton.textContent = "Play";
+  welcomeButton.innerHTML = '<i class="fa-solid fa-play fa-2xl"></i>';
   welcomeDiv.appendChild(welcomeButton);
   welcomeButton.addEventListener("click", () => {
     welcomeDiv.style.display = "none";
@@ -78,6 +78,7 @@ function playGame() {
   allRPSButtons.forEach(button => {
     button.addEventListener("click", (event) => {
       const playerChoice = event.target.textContent;
+      console.log(playerChoice);
       let checkRound = winCheck(getComputerChoice(), playerChoice, playerScore, computerScore);
       if (checkRound === 0) {
         playerScore++;

@@ -24,7 +24,7 @@ body {
 
 .welcomeDiv > .welcomeButton {
   border-radius: 10px;
-  height:30px;
+  height: 50px;
   width: 100px;
   margin-top: 20px;
 }
@@ -47,8 +47,27 @@ body {
 
 .playerChoiceDiv > button {
   border-radius: 10px;
-  height:30px;
+  height:50px;
   width: 100px;
+  background-repeat: no-repeat;
+  background-position: 50%;
+  font-size: 0;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+.playerChoiceDiv > .rockButton {
+  background-image: url("./img/rock.png");
+}
+
+.playerChoiceDiv > .paperButton {
+  background-image: url("./img/paper.png");
+}
+
+.playerChoiceDiv > .scissorsButton {
+  background-image: url("./img/scissors.png");
 }
 
 .resultDiv {
@@ -56,17 +75,20 @@ body {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  top: 55%;
 }
 
 .resultDiv > .roundResult {
   position: fixed;
-  top: 57%;
+  font-size: 24px;
+  font-weight: bold;
+  top: 60%;
 }
 
 .resultDiv > .score {
   position: fixed;
-  top: 61%;
+  font-size: 20px;
+  font-weight: bold;
+  top: 70%;
 }
 
 .resultDiv > .finalResult {
@@ -76,7 +98,7 @@ body {
 
 .container > .playAgainButton {
   border-radius: 10px;
-  height:30px;
+  height: 50px;
   width: 100px;
   margin-top: 20px;
 }
